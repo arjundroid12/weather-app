@@ -18,10 +18,10 @@
 
 ## 🚀 Live Demo
 
-| Host | URL |
-|------|-----|
-| 🥇 Surge.sh | https://arjun-weather.surge.sh |
-| 🥈 GitHub Pages | https://arjundroid12.github.io/weather-app/ |
+| Host | URL | Notes |
+|------|-----|-------|
+| 🥇 Surge.sh | https://arjun-weather.surge.sh | Bangalore edge — best for India |
+| 🥈 GitHub Pages | https://arjundroid12.github.io/weather-app/ | May be blocked by some Indian ISPs |
 
 ## 🛠️ Tech Stack
 
