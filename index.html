@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Weather app with city search, 5-day forecast, and geolocation. Uses free Open-Meteo API." />
+  <title>Weather · Open-Meteo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1>⛅ Weather</h1>
+      <button id="themeToggle" class="icon-btn" type="button">🌙</button>
+    </header>
+
+    <form id="searchForm" class="search">
+      <input id="cityInput" type="search" placeholder="Search city..." autocomplete="off" />
+      <button type="submit">Search</button>
+      <button id="geoBtn" type="button" title="Use my location">📍</button>
+    </form>
+
+    <div id="suggestions" class="suggestions" hidden></div>
+
+    <div id="loading" class="loading" hidden>Fetching weather…</div>
+    <div id="error" class="error" hidden></div>
+
+    <div id="weather" class="weather" hidden>
+      <div class="weather__current">
+        <div class="weather__main">
+          <span id="temp" class="weather__temp">—</span>
+          <span class="weather__unit">°C</span>
+        </div>
+        <div class="weather__meta">
+          <h2 id="cityName" class="weather__city">—</h2>
+          <p id="condition" class="weather__condition">—</p>
+          <p id="feels" class="weather__feels">Feels like —°</p>
+        </div>
+        <div id="icon" class="weather__icon">🌤️</div>
+      </div>
+
+      <div class="weather__details">
+        <div class="detail"><span>💧 Humidity</span><strong id="humidity">—</strong></div>
+        <div class="detail"><span>🌬️ Wind</span><strong id="wind">—</strong></div>
+        <div class="detail"><span>🌅 Sunrise</span><strong id="sunrise">—</strong></div>
+        <div class="detail"><span>🌇 Sunset</span><strong id="sunset">—</strong></div>
+      </div>
+
+      <h3 class="forecast-title">5-day forecast</h3>
+      <div id="forecast" class="forecast"></div>
+    </div>
+
+    <div id="recent" class="recent" hidden>
+      <h3>Recent searches</h3>
+      <div id="recentList" class="recent__list"></div>
+    </div>
+  </main>
+  <script src="./assets/app.js"></script>
+</body>
+</html>
